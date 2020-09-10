@@ -6,11 +6,19 @@
 
     <!-- google -->
 
-    <meta name="google-signin-client_id" content="884197039867-4r7hcu2d6uqe1angl7978r60hk6mtitc.apps.googleusercontent.com">
     <script type="text/javascript">
-      function init(){
-        console.log('init');
-      }
+      function init() {
+          gapi.load('auth2', function() {
+            var gauth =  gapi.auth2.init({
+            client_id: '884197039867-4r7hcu2d6uqe1angl7978r60hk6mtitc.apps.googleusercontent.com'
+            })
+            gauth.then(function(){
+              console.log('googleAuth success');
+            }, function(){
+              console.log('googleAuth fall');
+            })
+          });
+        }
     </script>
 
     <script type="text/javascript">
