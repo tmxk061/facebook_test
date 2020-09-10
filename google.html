@@ -16,10 +16,10 @@
               console.log('googleAuth success');
               var loginBtn = document.querySelector('#loginBtn');
               if(gauth.isSignedIn.get()){
-                console.log(logined);
+                console.log('logined');
                 loginBtn.value = 'Logout';
               } else{
-                console.log(logouted);
+                console.log('logouted');
                 loginBtn.value = 'Login';
               }
             }, function(){
