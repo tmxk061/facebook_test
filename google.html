@@ -14,6 +14,14 @@
             })
             gauth.then(function(){
               console.log('googleAuth success');
+              var loginBtn = document.querySelector('#loginBtn');
+              if(gauth.isSignedIn.get()){
+                console.log(logined);
+                loginBtn.value = 'Logout';
+              } else{
+                console.log(logouted);
+                loginBtn.value = 'Login';
+              }
             }, function(){
               console.log('googleAuth fall');
             })
@@ -22,14 +30,10 @@
     </script>
 
 
-
-
     <!-- google END -->
   </head>
   <body>
-    <!-- google -->
-
+    <input type="button" id="loginBtn" value="checking...">
     <script src="https://apis.google.com/js/platform.js?onload=init" async defer></script>
-    <!-- google End -->
   </body>
 </html>
