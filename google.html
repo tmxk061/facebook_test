@@ -35,11 +35,11 @@
   <body>
     <input type="button" id="loginBtn" value="checking..." onclick="
       if(this.value === 'Login'){
-        gauth.sighIn().then(function(){
+        gauth.signIn().then(function(){
           console.log('gauth.sighIn()');
         });
       }else {
-        gauth.sighOut().then(function(){
+        gauth.signOut().then(function(){
           console.log('gauth.sighIn()');
         });
       }
