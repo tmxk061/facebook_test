@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>test</title>
+
+    <!-- google -->
+    <meta name="google-signin-client_id" content="884197039867-4r7hcu2d6uqe1angl7978r60hk6mtitc.apps.googleusercontent.com">
+    <script type="text/javascript">
+      function onSignIn(googleUser){
+        console.log('apiLogined');
+        var profile = googleUser.getBasicProfile();
+        var nameTxt = document.querySelector('#name');
+        console.log('Name: ' + profile.getName());
+        nameTxt.innerHTML = 'Welcom <strong>'+profile.getName()+'</strong>';
+      }
+    </script>
+
+
+    <!-- google END -->
+  </head>
+  <body>
+    <div class="g-signin2" data-onsuccess="onSignIn"></div><span id="name"></span>
+
+    <script src="https://apis.google.com/js/platform.js?onload=init" async defer></script>
+  </body>
+</html>
